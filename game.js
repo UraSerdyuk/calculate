@@ -16,6 +16,11 @@ let c8 = document.getElementById('8');
 let c9 = document.getElementById('9');
 let c0 = document.getElementById('0');
 let back = document.getElementById('back');
+// function
+  function Rondom(num) {
+      num  = Math.floor((Math.random() * 10) + 1);
+      return  num; 
+  }
 
 num1.innerText =  `${one}`;
 num2.innerText =  `${two}`;
@@ -53,10 +58,13 @@ c0.addEventListener("click",function(){
 back.addEventListener("click",function(){
     result.innerText = `back`;
 });
+
 document.getElementById("equale").addEventListener("click", function(){
     console.log(`${res} ${result.textContent}`);
     if(res == result.textContent){
         result.innerText = `equale`;
+        num1.innerText =  `${Rondom(one)}`;
+        num2.innerText =  `${Rondom(two)}`;
         result.innerHTML;
     }else {
         result.innerText = `wrong`;
