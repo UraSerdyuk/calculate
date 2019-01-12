@@ -24,36 +24,37 @@ let back = document.getElementById('back');
 
 num1.innerText =  `${one}`;
 num2.innerText =  `${two}`;
-result.innerText = `...`;
+result.innerText = ``;
 c1.addEventListener("click",function(){
-    result.innerText = `1`;
+  result.innerText += `1`;
+
 });
 c2.addEventListener("click",function(){
-    result.innerText = `2`;
+    result.innerText += `2`;
 });
 c3.addEventListener("click",function(){
-    result.innerText = `3`;
+    result.innerText += `3`;
 });
 c4.addEventListener("click",function(){
-    result.innerText = `4`;
+    result.innerText += `4`;
 });
 c5.addEventListener("click",function(){
-    result.innerText = `5`;
+    result.innerText += `5`;
 });
 c6.addEventListener("click",function(){
-    result.innerText = `6`;
+    result.innerText += `6`;
 });
 c7.addEventListener("click",function(){
-    result.innerText = `7`;
+    result.innerText += `7`;
 });
 c8.addEventListener("click",function(){
-    result.innerText = `8`;
+    result.innerText += `8`;
 });
 c9.addEventListener("click",function(){
-    result.innerText = `9`;
+    result.innerText += `9`;
 });
 c0.addEventListener("click",function(){
-    result.innerText = `0`;
+    result.innerText += `0`;
 });
 back.addEventListener("click",function(){
     result.innerText = `back`;
@@ -62,11 +63,15 @@ back.addEventListener("click",function(){
 document.getElementById("equale").addEventListener("click", function(){
     console.log(`${res} ${result.textContent}`);
     if(res == result.textContent){
-        result.innerText = `equale`;
-        num1.innerText =  `${Rondom(one)}`;
-        num2.innerText =  `${Rondom(two)}`;
+        result.innerText = ``;
+
+        one = Rondom(one);
+        two = Rondom(two);
+        res = one * two;
+        num1.innerText =  `${one}`;
+        num2.innerText =  `${two}`;
         result.innerHTML;
     }else {
-        result.innerText = `wrong`;
+        result.innerText = ``;
     }
 });
