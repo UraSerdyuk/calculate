@@ -57,7 +57,11 @@ c0.addEventListener("click",function(){
     result.innerText += `0`;
 });
 back.addEventListener("click",function(){
-    result.innerText = `back`;
+    console.log('presed');
+    console.log(result.textContent);
+    console.log(result.textContent.substring(0,result.textContent.length -1));
+    result.textContent = result.textContent.substring(0,result.textContent.length -1);
+    
 });
 
 document.getElementById("equale").addEventListener("click", function(){
