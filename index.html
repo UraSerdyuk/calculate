@@ -3,6 +3,7 @@
 <head>
     <!--add materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
      <!--add materialize -->
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -11,18 +12,20 @@
     <title>Document</title>
 </head>
 <body>
+        
     <head>
         <div class="wraper">
-            <div>
+               
                 <header>
-                    <h1 >Game Start :  <i class="material-icons">arrow_back</i></h1>
+                    <h1 >correct answerp =<p id="score1"></p></h1>
+                    <h1 > wrong answer = <p id="score2"></p></h1>
                 </header>
                 <main>
                     <div class="number">
                         <div class="number1"><p id="num1">1</p></div>
                         <h1>*</h1>
                         <div class="number2"><p id="num2">2</p></div>
-                        <h1>=</h1>
+                        <h1><a class="btn-floating pulse"><i class="material-icons">drag_handle</i></a></h1>
                         <div class="number3"><p id="result">...</p></div>
                     </div>
 
@@ -54,9 +57,9 @@
                             </li>
                             <li class="li4">
                                     <ul class="ul2">
-                                            <li class="li1_2" id="back"><i class="large material-icons">backspace</i></li>
+                                            <li class="li1_2" id="back"><i class="medium material-icons">backspace</i></li>
                                             <li class="li1_2" id="0"><p>0</p></li>
-                                            <li class="li1_2" id="equale"><i class="large material-icons">exit_to_app</i></li>
+                                            <li class="li1_2" id="equale"><i class="medium material-icons">exit_to_app</i></li>
                                     </ul>
                             </li>
                         </ul>
@@ -65,6 +68,9 @@
             </div>
         </div>
     </head>
+
  <script src="game.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
 </html>

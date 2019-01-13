@@ -1,9 +1,14 @@
+// create variable
 let num1 = document.getElementById('num1');
 let num2 = document.getElementById('num2');
 let result =document.getElementById('result');
 let one = 1;
 let two = Math.floor((Math.random() * 10) + 1);
 let res = one * two;
+let correctAnswer = 0;
+let wrongAnswer = 0 ;
+
+
 // clawa 
 let c1 = document.getElementById('1');
 let c2 = document.getElementById('2');
@@ -16,15 +21,25 @@ let c8 = document.getElementById('8');
 let c9 = document.getElementById('9');
 let c0 = document.getElementById('0');
 let back = document.getElementById('back');
+// score
+let score1 = document.getElementById('score1');
+let score2 = document.getElementById('score2');
+
 // function
   function Rondom(num) {
       num  = Math.floor((Math.random() * 10) + 1);
       return  num; 
   }
-
+  
+// code
 num1.innerText =  `${one}`;
 num2.innerText =  `${two}`;
+score1.innerText = `${correctAnswer}`;
+score2.innerText = `${wrongAnswer}`;
 result.innerText = ``;
+
+
+
 c1.addEventListener("click",function(){
   result.innerText += `1`;
 
@@ -68,14 +83,18 @@ document.getElementById("equale").addEventListener("click", function(){
     console.log(`${res} ${result.textContent}`);
     if(res == result.textContent){
         result.innerText = ``;
-
         one = Rondom(one);
         two = Rondom(two);
         res = one * two;
+        correctAnswer++;
+        score1.innerText = `${correctAnswer}`;
         num1.innerText =  `${one}`;
         num2.innerText =  `${two}`;
         result.innerHTML;
     }else {
+        wrongAnswer++;
+        score2.innerText = `${wrongAnswer}`;
         result.innerText = ``;
     }
 });
+
