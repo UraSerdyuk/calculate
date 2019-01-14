@@ -7,6 +7,8 @@ let two = Math.floor((Math.random() * 10) + 1);
 let res = one * two;
 let correctAnswer = 0;
 let wrongAnswer = 0 ;
+let timer =0;
+let button = document.querySelector('.waves-effect');
 
 
 // clawa 
@@ -24,12 +26,22 @@ let back = document.getElementById('back');
 // score
 let score1 = document.getElementById('score1');
 let score2 = document.getElementById('score2');
-
+// timer
+let time = document.getElementById('timer');
 // function
   function Rondom(num) {
       num  = Math.floor((Math.random() * 10) + 1);
       return  num; 
   }
+  function Start (){
+    button.className = 'presed';
+    setInterval(function(){
+     timer++;
+     time.innerText = timer;
+     time.innerHTML;
+      console.log(timer);
+     },1000);
+}
   
 // code
 num1.innerText =  `${one}`;
@@ -97,4 +109,5 @@ document.getElementById("equale").addEventListener("click", function(){
         result.innerText = ``;
     }
 });
+
 

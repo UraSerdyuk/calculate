@@ -50,7 +50,7 @@ header h1 {
 }
 .number {
     display: flex;
-    margin-bottom: 100px;
+    
 }
 #equale {
     background: green;
@@ -90,4 +90,18 @@ user-select: none;
 }
 #score1,#score2 {
     display: inline;
+}
+/*TIMER*/
+header {
+    position: relative;
+}
+#timer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: red;
+    font-size: 30px;
+}
+.presed {
+    display: none;
 }
