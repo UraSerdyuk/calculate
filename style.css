@@ -3,17 +3,34 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+font-size: 16px;
+}
 ul {
     list-style: none;
 }
 .wraper {
+    width: 100%;
+    height: 100vh;
+    min-width: 320px;
     max-width: 1024px;
     background: #554984;
-    margin: auto;   
+    margin: auto; 
+    /*расположение кнопки по центру*/  
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
-header h1 {
+.endResult {
+    display: none;
     color: white;
     text-align: center;
+    font-size: 16px;
+}
+.endResult2 {
+    display: block;
 }
 .number1 {
     width: 300px;
@@ -63,7 +80,20 @@ header h1 {
     /* border: 1px solid; */
     padding: 2%;
 }
+/*main*/
+.main {
+    display: none;
+}
+.mainBlock {
+    display: block;
+}
 /* footer*/ 
+.clawa {
+display: none;
+}
+.clawaBlock {
+    display: block;
+}
 .ul {
     width: 300px;
     margin: auto;
@@ -83,19 +113,24 @@ header h1 {
     font-weight: 900;
 
     -moz-user-select: -moz-none;
--o-user-select: none;
--khtml-user-select: none;
--webkit-user-select: none;
-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 #score1,#score2 {
     display: inline;
+}
+.button {
+    display: flex;
+    justify-content: center;
 }
 /*TIMER*/
 header {
     position: relative;
 }
 #timer {
+    display: none;
     position: absolute;
     top: 20px;
     left: 20px;
@@ -105,3 +140,14 @@ header {
 .presed {
     display: none;
 }
+
+.parallax-container {
+    height: "your height here";
+  } 
+
+  @media only screen and (min-width: 480px) {
+    .wraper {
+        background: #484;
+    }
+    
+  }

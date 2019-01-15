@@ -7,11 +7,24 @@ let two = Math.floor((Math.random() * 10) + 1);
 let res = one * two;
 let correctAnswer = 0;
 let wrongAnswer = 0 ;
-let timer =0;
+let timer = 0;
 let button = document.querySelector('.waves-effect');
+// clawiatura
+let clawiatura = document.querySelector('.clawa'); 
+//clawiatura
+// main
+let main = document.querySelector('.main'); 
+//main
+// score
+let score1 = document.getElementById('score1');
+let score2 = document.getElementById('score2');
+// timer
+let time = document.getElementById('timer');
+let divResult = document.querySelector('.endResult');
 
 
-// clawa 
+
+    // clawa 
 let c1 = document.getElementById('1');
 let c2 = document.getElementById('2');
 let c3 = document.getElementById('3');
@@ -23,26 +36,38 @@ let c8 = document.getElementById('8');
 let c9 = document.getElementById('9');
 let c0 = document.getElementById('0');
 let back = document.getElementById('back');
-// score
-let score1 = document.getElementById('score1');
-let score2 = document.getElementById('score2');
-// timer
-let time = document.getElementById('timer');
+
+
+
+
 // function
   function Rondom(num) {
       num  = Math.floor((Math.random() * 10) + 1);
       return  num; 
   }
+
   function Start (){
+    time.style.display = 'block';
     button.className = 'presed';
-    setInterval(function(){
+    main.className = 'mainBlock';
+    clawiatura.className = 'clawaBlock';
+
+
+   let myInterval = setInterval(function(){
      timer++;
      time.innerText = timer;
      time.innerHTML;
-      console.log(timer);
+     if(timer == 30) {
+        clearInterval(myInterval);
+        ShowResult();
+    }
      },1000);
+     
+
+
 }
-  
+
+
 // code
 num1.innerText =  `${one}`;
 num2.innerText =  `${two}`;
@@ -51,38 +76,42 @@ score2.innerText = `${wrongAnswer}`;
 result.innerText = ``;
 
 
+// обработчики на клавиатуре
+(()=>{
+    c1.addEventListener("click",function(){
+        result.innerText += `1`;
+      });
+      c2.addEventListener("click",function(){
+          result.innerText += `2`;
+      });
+      c3.addEventListener("click",function(){
+          result.innerText += `3`;
+      });
+      c4.addEventListener("click",function(){
+          result.innerText += `4`;
+      });
+      c5.addEventListener("click",function(){
+          result.innerText += `5`;
+      });
+      c6.addEventListener("click",function(){
+          result.innerText += `6`;
+      });
+      c7.addEventListener("click",function(){
+          result.innerText += `7`;
+      });
+      c8.addEventListener("click",function(){
+          result.innerText += `8`;
+      });
+      c9.addEventListener("click",function(){
+          result.innerText += `9`;
+      });
+      c0.addEventListener("click",function(){
+          result.innerText += `0`;
+      });
+})();
 
-c1.addEventListener("click",function(){
-  result.innerText += `1`;
 
-});
-c2.addEventListener("click",function(){
-    result.innerText += `2`;
-});
-c3.addEventListener("click",function(){
-    result.innerText += `3`;
-});
-c4.addEventListener("click",function(){
-    result.innerText += `4`;
-});
-c5.addEventListener("click",function(){
-    result.innerText += `5`;
-});
-c6.addEventListener("click",function(){
-    result.innerText += `6`;
-});
-c7.addEventListener("click",function(){
-    result.innerText += `7`;
-});
-c8.addEventListener("click",function(){
-    result.innerText += `8`;
-});
-c9.addEventListener("click",function(){
-    result.innerText += `9`;
-});
-c0.addEventListener("click",function(){
-    result.innerText += `0`;
-});
+//кнопка назад
 back.addEventListener("click",function(){
     console.log('presed');
     console.log(result.textContent);
@@ -91,6 +120,8 @@ back.addEventListener("click",function(){
     
 });
 
+
+// зеленая кнопка отправить результат
 document.getElementById("equale").addEventListener("click", function(){
     console.log(`${res} ${result.textContent}`);
     if(res == result.textContent){
@@ -110,4 +141,10 @@ document.getElementById("equale").addEventListener("click", function(){
     }
 });
 
-
+// что произоизойдет после окончания таймера 
+let ShowResult = ()=>{
+    divResult.className = 'endResult2';
+    main.style.display = 'none';
+    clawiatura.style.display = 'none';
+    console.log('working )))');
+};
