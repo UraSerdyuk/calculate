@@ -7,7 +7,7 @@ let two = Math.floor((Math.random() * 10) + 1);
 let res = one * two;
 let correctAnswer = 0;
 let wrongAnswer = 0 ;
-let timer = 0;
+let timer = 30;
 let button = document.querySelector('.waves-effect');
 // clawiatura
 let clawiatura = document.querySelector('.clawa'); 
@@ -21,7 +21,7 @@ let score2 = document.getElementById('score2');
 // timer
 let time = document.getElementById('timer');
 let divResult = document.querySelector('.endResult');
-
+let timerBlock = document.querySelector('.timerBlock');
 
 
     // clawa 
@@ -45,19 +45,20 @@ let back = document.getElementById('back');
       num  = Math.floor((Math.random() * 10) + 1);
       return  num; 
   }
-
+//           START   =>
   function Start (){
     time.style.display = 'block';
     button.className = 'presed';
     main.className = 'mainBlock';
     clawiatura.className = 'clawaBlock';
+    timerBlock.style.display = 'block';
 
 
    let myInterval = setInterval(function(){
-     timer++;
+     timer--;
      time.innerText = timer;
      time.innerHTML;
-     if(timer == 30) {
+     if(timer == 0) {
         clearInterval(myInterval);
         ShowResult();
     }
