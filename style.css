@@ -96,9 +96,9 @@ display: none;
     display: block;
 }
 .ul {
-    width: 300px;
+    width: 175px;
     margin: auto;
-    background: gray;
+    
 }
 .ul2 {
     display: flex;
@@ -110,7 +110,7 @@ display: none;
     border: 1px solid;
     color: blue;
     text-align: center;
-    font-size: 46px;
+    font-size: 40px;
     font-weight: 900;
 
     -moz-user-select: -moz-none;
@@ -118,7 +118,9 @@ display: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+    border-radius: 18px;
 }
+
 #score1,#score2 {
     display: inline;
 }
@@ -139,7 +141,7 @@ display: none;
     position: relative;
     color: red;
     font-size: 30px;
-    
+    left: -5%;
 }
 .presed {
     display: none;

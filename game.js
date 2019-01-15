@@ -7,7 +7,7 @@ let two = Math.floor((Math.random() * 10) + 1);
 let res = one * two;
 let correctAnswer = 0;
 let wrongAnswer = 0 ;
-let timer = 30;
+let timer = 30000;
 let button = document.querySelector('.waves-effect');
 // clawiatura
 let clawiatura = document.querySelector('.clawa'); 
@@ -81,33 +81,43 @@ result.innerText = ``;
 (()=>{
     c1.addEventListener("click",function(){
         result.innerText += `1`;
+        Press(c1);
       });
       c2.addEventListener("click",function(){
           result.innerText += `2`;
+          Press(c2);
       });
       c3.addEventListener("click",function(){
           result.innerText += `3`;
+          Press(c3);
       });
       c4.addEventListener("click",function(){
           result.innerText += `4`;
+          Press(c4);
       });
       c5.addEventListener("click",function(){
           result.innerText += `5`;
+          Press(c5);
       });
       c6.addEventListener("click",function(){
           result.innerText += `6`;
+          Press(c6);
       });
       c7.addEventListener("click",function(){
           result.innerText += `7`;
+          Press(c7);
       });
       c8.addEventListener("click",function(){
           result.innerText += `8`;
+          Press(c8);
       });
       c9.addEventListener("click",function(){
           result.innerText += `9`;
+          Press(c9);
       });
       c0.addEventListener("click",function(){
           result.innerText += `0`;
+          Press(c0);
       });
 })();
 
@@ -149,3 +159,15 @@ let ShowResult = ()=>{
     clawiatura.style.display = 'none';
     console.log('working )))');
 };
+let Press = (element)=>{
+ let number =  setInterval(function(){
+    element.style.color = 'red';
+            console.log('red');
+        },20);
+        element.style.color = 'red';
+
+        setTimeout(function(){
+            clearInterval(number);
+            element.style.color = 'blue';
+        },100);
+    }
