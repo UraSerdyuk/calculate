@@ -64,19 +64,24 @@ ul {
     height: 85px;
     background-color: gold;
     border: 2px solid black;
+    overflow: hidden;
 }
 .number {
     display: flex;
-    
+    justify-content: center;
 }
 #equale {
     background: green;
-    
+}
+#equale:hover {
+    background: rgba(211, 68, 24, 0.171);
 }
 .number h1{
     display: block;
     color: red;
     font-size: 47px;
+
+    margin-top: 16px;
     
 }
 /*main*/
@@ -86,6 +91,7 @@ ul {
 .mainBlock {
     display: block;
     width: 100%;
+    margin-bottom: 30px;
 }
 /* footer*/ 
 .clawa {
@@ -101,6 +107,9 @@ display: none;
 }
 .ul2 {
     display: flex;
+}
+.ul2 li:hover {
+    background-color: cadetblue;
 }
 .li1_2 {
     width: 60px;

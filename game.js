@@ -7,7 +7,7 @@ let two = Math.floor((Math.random() * 10) + 1);
 let res = one * two;
 let correctAnswer = 0;
 let wrongAnswer = 0 ;
-let timer = 30000;
+let timer = 30;
 let button = document.querySelector('.waves-effect');
 // clawiatura
 let clawiatura = document.querySelector('.clawa'); 
