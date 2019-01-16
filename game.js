@@ -157,8 +157,10 @@ let ShowResult = ()=>{
     divResult.className = 'endResult2';
     main.style.display = 'none';
     clawiatura.style.display = 'none';
+    time.style.display = 'none';
     console.log('working )))');
 };
+// анимация при нажатии на кнопку 
 let Press = (element)=>{
  let number =  setInterval(function(){
     element.style.color = 'red';
