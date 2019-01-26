@@ -19,5 +19,6 @@
   "homepage": "https://github.com/UraSerdyuk/game-#readme",
   "dependencies": {
     "express": "^4.16.4"
-  }
+  },
+  "proxy": "http://localhost:3000"
 }
